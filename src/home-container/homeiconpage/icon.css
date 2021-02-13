@@ -1,0 +1,53 @@
+.main{
+    background:url(.././background.jpg) no-repeat center center fixed;
+    margin-top:3%;
+    width:100%;
+    height:100vh;
+}
+.start{
+  margin-left:132px;
+}
+
+.startp
+{
+  display: flex;
+  flex-flow:row;
+}
+.letter
+{
+  letter-spacing: 0.2rem;
+}
+@media only screen
+   and (max-width : 490px) {
+.heading{
+  font-size:6vw;
+  margin-top:45%;
+  margin-bottom: 20px;
+}
+.letter{
+  font-size:5vw;
+}
+.main{
+  height:150vh;
+}
+.startp
+{
+  flex-flow:column;
+}
+}
+
+@media only screen
+   and (max-width :768px) {
+.startp
+{
+  flex-flow:column;
+}
+}
+
+@media only screen
+   and (max-width :1024px) {
+.startp
+{
+  flex-flow:column;
+}
+}

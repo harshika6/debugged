@@ -1,0 +1,73 @@
+
+.faqs {
+	width: 100%;
+	margin: 0 auto;
+	padding: 15px;
+}
+.App{
+	 background-color: rgb(27, 27, 27);
+	 color: white;
+	justify-content: center;
+	width: 100%;
+}
+
+.faqs .faq {
+	margin: 15px;
+	padding: 15px;
+	background-color: rgb(27, 27, 27);
+	border-radius: 8px;
+}
+
+.faq-question:hover{
+	cursor: pointer;
+}
+
+.faqs .faq .faq-question {
+	position: relative;
+	font-size: 20px;
+  text-align: center;
+	transition: all 0.4s ease;
+}
+
+.faqs .faq .faq-question::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	transform: translateY(-50%);
+	width: 30px;
+	height: 30px;
+
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	transition: all 0.4s ease-out;
+}
+.bb
+{
+	align-items:center;
+	width:90vw;
+}
+
+.faqs .faq .faq-answer {
+	opacity: 0;
+	max-height: 0;
+	overflow-y: hidden;
+	transition: all 0.4s ease-out;
+	color: #adb5bd;
+	text-align: center;
+}
+
+.faqs .faq.open .faq-question {
+	margin-bottom: 15px;
+}
+
+.faqs .faq.open .faq-question::after {
+	transform: translateY(-50%) rotate(180deg);
+}
+
+.faqs .faq.open .faq-answer {
+	max-height: 1000px;
+	opacity: 1;
+}

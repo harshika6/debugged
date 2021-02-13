@@ -1,0 +1,106 @@
+.Home{
+  text-align: center;
+  background-color: rgb(27, 27, 27);
+  font-family: Inter, sans-serif;
+  color:white;
+  overflow: hidden;
+}
+.home1{
+    background:url(./background.jpg) no-repeat center center fixed;
+    margin-top:10%;
+    width:100%;
+    height:100vh;
+    text-align: center;
+}
+.tag{
+  font-size: 3px;
+}
+.heading
+{
+  font-family: 'Yusei Magic', sans-serif;
+  margin-top:7%;
+}
+.services{
+  font-size: 1.4em;
+  text-align: left;
+  display:flex;
+  justify-content: center;
+}
+
+.box1
+{
+  margin-right: 10%;
+}
+.box2
+{
+  margin-left: 5%;
+}
+.footer{
+color:#adb5bd ;
+text-align: center;
+}
+.bb
+{
+  width:800px;
+}
+
+.test
+{
+  height:200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.ques1{
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: left;
+}
+
+p{
+  margin-left: 10%;
+  margin-right: 10%;
+  color:#adb5bd;
+}
+
+.code
+{
+  color:#e88f0a;
+}
+.hide {
+  display: none;
+}
+.ques{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.myDIV:hover + .hide {
+  display: block;
+  color:#adb5bd ;
+}
+.parallax{
+  width:'100%';
+  height:'400px';
+}
+.navhead,ul{
+  display: flex;
+  justify-content:space-around;
+}
+ul{
+  list-style: none;
+}
+Carousel{
+  z-index:0;
+}
+
+@media only screen
+   and (max-width :960px) {
+
+.parallax{
+  height:100%;
+}
+.test{
+  height:150px;
+  width: 150px;
+}
+}

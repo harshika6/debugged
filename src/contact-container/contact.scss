@@ -1,0 +1,47 @@
+
+.links:hover{
+  cursor: pointer;
+}
+.divide{
+  width:35vw;
+}
+.container{
+  margin-top:15%;
+  display:flex;
+  justify-content: space-between;
+}
+a:link, a:visited{
+ text-decoration: none;
+ color:black;
+}
+.a
+{
+  color: black;
+}
+.links{
+  padding:3%;
+}
+
+
+
+@media only screen
+   and (max-width : 490px) {
+  .container{
+      margin-top:35%;
+      display: block;
+  }
+  .divide{
+    width:80vw;
+    margin-left: 0;
+  }
+  .linkicon{
+    margin-top: 15%;
+  }
+.icon{
+  margin-right: 0;
+}
+.iconboss{
+  align-items: center;
+  margin-left:0px;
+}
+}
