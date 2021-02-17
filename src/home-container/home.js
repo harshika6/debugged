@@ -36,7 +36,7 @@ class Home extends Component {
       &nbsp;
       <Test/>
 
-   <span className="pa5"  id="about"></span>
+   <span className="pa5-l"  id="about"></span>
      <Parallax bgImage={parallaximg} strength={500} className="parallax">
       <div>
         <h1 className="code ma3 mt5" style={{fontFamily: 'Yusei Magic'}}>About Us</h1>

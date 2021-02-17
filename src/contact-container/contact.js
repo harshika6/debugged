@@ -83,12 +83,12 @@ class Contact extends Component {
 			</div>
 			<div className="mt4 ml3 mr5 icon">
 			<div className="links grow mb4">  <a href="#" className="a"><FaFacebookF size="2em" color="#e88f0a" className="mr2 grow"/></a></div>
-			<div className="links grow mb4"> <a href="#" className="a"> <FaWhatsapp size="2em" color="#e88f0a" className="mr2 grow"/></a></div>
+			<div className="links grow mb4"> <a href="https://wa.me/919168894490" className="a"><FaWhatsapp size="2em" color="#e88f0a" className="mr2 grow"/></a></div>
 			</div>
       </div>
 						<p className="serv black fw4 ml2">Head Office</p>
 						<div className="bb bw2 center divide mt3" ></div>
-						<div className="links mt2"> <GoMail size="2em" color="#e88f0a" className="mr2 "/>debugged.exe@gmail.com</div>
+						<div className="links mt2"><a href='mailto:debugged.exe@gmail.com'><GoMail size="2em" color="#e88f0a" className="mr2 "/>debugged.exe@gmail.com</a></div>
 						<div className="links"> <FaPhoneAlt size="1.5em" color="#e88f0a" className="mr2 "/>+91 9168894490</div>
            	<div className="links mt2"> <GoLocation size="2em" color="#e88f0a" className="mr2 "/>Pune,Maharashtra</div>
       </div>

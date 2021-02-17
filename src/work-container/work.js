@@ -1,6 +1,7 @@
 import React,{Component,useState} from 'react';
 import './work.css';
 import 'tachyons';
+import Gallery from './Gallery.js';
 import {BsChevronDoubleDown } from "react-icons/bs";
 import AOS from 'aos';
 import { WorkCompleted } from './workcompleted.js';
@@ -23,7 +24,7 @@ console.log(visible);
 console.log(WorkCompleted.length);
    return (
      <>
-     <span id="projcomp"></span> 
+     <span id="projcomp"></span>
     <div className="home2" >
         <div className="mt4" >
           <p className="pro ml4 white" data-aos="fade-up" data-aos-duration="1500" style={{fontFamily: 'Yusei Magic'}}> Projects Completed</p>
@@ -53,7 +54,14 @@ console.log(WorkCompleted.length);
                <h5 onClick={showMoreItems} className={`center showmore mt5 ${visible>=WorkCompleted.length?'hide':''}`}>Show More</h5>
                <BsChevronDoubleDown className={`arrowdown code ${visible>=WorkCompleted.length?'hide':''}`} size="2rem"/>
 
-               <div className="mt4">
+               <div className="mt5">
+                 <p className="pro white ml3" data-aos="fade-up" data-aos-duration="1500" style={{fontFamily: 'Yusei Magic'}}>Our digital marketing</p>
+                 <div className="bb bw2 left line mb4"></div>
+                 <Gallery />
+              </div>
+
+
+               <div className="mt5">
                  <p className="pro white ml3" data-aos="fade-up" data-aos-duration="1500" style={{fontFamily: 'Yusei Magic'}}> Upcoming Completed</p>
                  <div className="bb bw2 left line"></div>
 
