@@ -9,7 +9,7 @@ import { BiMobile ,BiLaptop} from "react-icons/bi";
 // import logo from './debuggedlogo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Carousel} from 'react-bootstrap';
-import image1 from '.././testimonials/1.png';
+import image1 from '.././testimonials/1.jpeg';
 import image2 from '.././testimonials/2.png';
 import image3 from '.././testimonials/3.png';
 import parallaximg from './parallaximg.png';
@@ -39,11 +39,10 @@ class Home extends Component {
    <span className="pa5-l"  id="about"></span>
      <Parallax bgImage={parallaximg} strength={500} className="parallax">
       <div>
-        <h1 className="code ma3 mt5" style={{fontFamily: 'Yusei Magic'}}>About Us</h1>
-        <p className="pa5 white" style={{fontFamily: 'Yusei Magic'}}> We have been hands on various projects together and Abhishek is one of the best people I had as a patner,
-        He has strong problem solving skills and his ability for tackling problems is remarkable!
-        We have been hands on various projects together and Abhishek is one of the best people I had as a patner,
-        He has strong problem solving skills and his ability for tackling problems is remarkable!</p>
+        <h1 className="code ma3 mt5" style={{fontFamily: 'Yusei Magic'}}>About <span className="white"> Us</span></h1>
+        <p className="pa5 white" style={{fontFamily: 'Yusei Magic'}}><p className="white"><span className="code f3">debugged</span><span className="f3 white"> .exe </span><span className="f4">is a group of enthusiastic, developers who build websites and mobile applications, providing the needful services to individuals and companies alike.</span></p>
+          <br/><p className="f4 white"> We ,at <span className="code f3">debugged</span> are striving to bring solutions to your problems in the most simplistic and practical manner.</p>
+        </p>
       </div>
     </Parallax>
 

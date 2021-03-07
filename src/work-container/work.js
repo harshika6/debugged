@@ -1,27 +1,72 @@
-import React,{Component,useState} from 'react';
+import React,{Component,useState,useEffect} from 'react';
 import './work.css';
 import 'tachyons';
-import Gallery from './Gallery.js';
+// import Gallery from './Gallery.js';
 import {BsChevronDoubleDown } from "react-icons/bs";
 import AOS from 'aos';
-import { WorkCompleted } from './workcompleted.js';
-import { UpcomingProjects } from './upcomingprojects.js'
+// import { WorkCompleted } from './workcompleted.js';
+// import { UpcomingProjects } from './upcomingprojects.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-elastic-carousel'
+
+
 
 const Work =()=> {
 
   AOS.init();
-  const[items,setItems]=useState(WorkCompleted);
-  const[upcoming,setUpcoming]=useState(UpcomingProjects);
+  const[items,setItems]=useState([]);
+  const[upcoming,setUpcoming]=useState([]);
   const [visible,setVisible]=useState(3);
+  const [len,setLen]=useState(0);
+  const[gal,setGal]=useState([]);
+
+   useEffect(()=>{
+     fetch('http://localhost:3000/completed')
+     .then(response=>response.json())
+     .then(resp=>{
+       if(resp[0].title){
+         setItems(resp);
+         setLen(resp.length);
+         console.log(resp.length);
+       }
+     })
+     .catch(err => {
+ 			console.log(err)
+ 			alert('OOPS....something went wrong.Please try again.')
+ 		})
+
+    fetch('http://localhost:3000/digital')
+    .then(response=>response.json())
+    .then(resp=>{
+      if(resp[0]._id){
+        setGal(resp);
+        console.log(resp.length,"gal");
+      }
+    })
+    .catch(err => {
+     console.log(err)
+     alert('OOPS....something went wrong.Please try again.')
+   })
+
+   fetch('http://localhost:3000/upcoming')
+   .then(response=>response.json())
+   .then(resp=>{
+     if(resp[0].title){
+       setUpcoming(resp);
+       console.log(resp.length);
+     }
+   })
+   .catch(err => {
+    console.log(err)
+    alert('OOPS....something went wrong.Please try again.')
+  })
+  },[])
+
 
 const showMoreItems=()=>
   {
     setVisible((prev)=>prev+3);
   }
-console.log(visible);
-console.log(WorkCompleted.length);
    return (
      <>
      <span id="projcomp"></span>
@@ -51,13 +96,24 @@ console.log(WorkCompleted.length);
                   )
                 )
               }
-               <h5 onClick={showMoreItems} className={`center showmore mt5 ${visible>=WorkCompleted.length?'hide':''}`}>Show More</h5>
-               <BsChevronDoubleDown className={`arrowdown code ${visible>=WorkCompleted.length?'hide':''}`} size="2rem"/>
+
+              <h5 onClick={showMoreItems} className={`center showmore mt5 ${visible>=len?'hide':''}`}>Show More</h5>
+              <BsChevronDoubleDown className={`arrowdown code ${visible>=len?'hide':''}`} size="2rem"/>
+
 
                <div className="mt5">
                  <p className="pro white ml3" data-aos="fade-up" data-aos-duration="1500" style={{fontFamily: 'Yusei Magic'}}>Our digital marketing</p>
                  <div className="bb bw2 left line mb4"></div>
-                 <Gallery />
+                 <div className="flex flex-wrap">
+                 {
+                    gal.map((data)=>(
+                    <div data-aos={data.dataaos} data-aos-duration={data.dataaosduration} className="ma3">
+                         <a className="dim" href={data.link}>
+                        <img src={data.image} height={data.height} width={data.width}/></a>
+                      </div>
+                    ))
+                  }
+                 </div>
               </div>
 
 
