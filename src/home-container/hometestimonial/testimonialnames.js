@@ -20,14 +20,6 @@ description:"I can recommend debugged.exe team with confidence as I belive them 
 },
 {
   id:3,
-  name:'Shubhangi Khade',
-  photo:image3,
-  date:'20th Feb 2021',
-  description:"I just want to say thankful for the services you provided. You came on board when we really needed you and undertook your tasks in a very timely and professional manner. I sincerely hope we get a chance to work together again.",
-
-},
-{
-  id:4,
   name:'Darshan Kumbharkar',
   photo:image3,
   date:'26th Feb 2021',
