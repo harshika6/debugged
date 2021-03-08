@@ -21,7 +21,7 @@ const Work =()=> {
   const[gal,setGal]=useState([]);
 
    useEffect(()=>{
-     fetch('http://localhost:3000/completed')
+     fetch('https://fierce-wave-93667.herokuapp.com/completed')
      .then(response=>response.json())
      .then(resp=>{
        if(resp[0].title){
@@ -35,7 +35,7 @@ const Work =()=> {
  			alert('OOPS....something went wrong.Please try again.')
  		})
 
-    fetch('http://localhost:3000/digital')
+    fetch('https://fierce-wave-93667.herokuapp.com/digital')
     .then(response=>response.json())
     .then(resp=>{
       if(resp[0]._id){
@@ -48,7 +48,7 @@ const Work =()=> {
      alert('OOPS....something went wrong.Please try again.')
    })
 
-   fetch('http://localhost:3000/upcoming')
+   fetch('https://fierce-wave-93667.herokuapp.com/upcoming')
    .then(response=>response.json())
    .then(resp=>{
      if(resp[0].title){
@@ -85,7 +85,7 @@ const showMoreItems=()=>
                              <img src={data.image2} alt="project sharva" className="imgdiv"/>
                              <img src={data.image3} alt="project sharva"  className="imgdiv"/>
                            </Carousel>
-                                   <div className="flex flex-column items-center" data-aos="fade-left" data-aos-duration="1000">
+                                   <div className="flex flex-column items-center" style={{width:'100vw'}}data-aos="fade-left" data-aos-duration="1000">
                                     <p  className="pro tc white" style={{fontFamily: 'Yusei Magic'}}> {data.title}</p>
                                     <p>{data.description}</p>
                                     <a href={data.link}><button className=" book grow br2 mb1" >View webiste</button></a>

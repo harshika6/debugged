@@ -6,7 +6,7 @@ function Gallery() {
    const[gal,setgal]=useState([]);
 
    useEffect(()=>{
-     fetch('http://localhost:3000/digital')
+     fetch('https://fierce-wave-93667.herokuapp.com/digital')
      .then(response=>response.json())
      .then(resp=>{
        if(resp[0].title){
@@ -20,7 +20,7 @@ function Gallery() {
     })
    },[]);
 
-   
+
     return (
                <div className="flex flex-wrap">
                {

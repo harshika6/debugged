@@ -23,7 +23,7 @@ class Contact extends Component {
   }
   handleSubmit = (event) => {
 		event.preventDefault();
-		fetch('http://localhost:3000/contact', {
+		fetch('https://fierce-wave-93667.herokuapp.com/contact', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
